@@ -8,7 +8,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
 import './App.css';
 import './App2.css';
- import { Dashbordhtml ,Footer,Topnav,Contentpage,Navtop } from './component/dashbord';
+ import { Dashbordhtml, LeftNavbar, TopNavbar,Contentpage1,Contentpage2,Navtop, Footer } from './component/oldbord';
+
 
 
  import { Buttons } from './component/Buttons';
@@ -26,35 +27,24 @@ import { faChartArea, faCog, faTable, faTachometerAlt, faWrench } from '@fortawe
 // for using default way of including fontawesome icon 
 // for ex: <i className="fas fa-laugh-wink"></i>
   import '@fortawesome/fontawesome-free/css/all.min.css';
+import Wrapperpage from './component/pagewrapper';
+
 
 // To install fontawesome
 // npm i -S @fortawesome/fontawesome-svg-core @fortawesome/react-fontawesome @fortawesome/free-regular-svg-icons @fortawesome/free-solid-svg-icons @fortawesome/free-brands-svg-icons
 
-function App({data}) {
+function App({EarningsDAta}) {
 
 
   return (
     <>
       <div id="page-top">
-    <div id='wrapper'>
+       <Wrapperpage EarningsDAta={EarningsDAta}/>
+
+      
+
+      </div>
   
-    <Dashbordhtml />
-    <div id="content-wrapper" className="d-flex flex-column">
-
-    {/* <!-- Main Content --> */}
-    <div id="content">
-    <Topnav/>
-    <Contentpage dataearning={data}/>
-    {/* <Buttons/> */}
-    {/* <Buttons/> */}
-
-    </div>
-    <Footer />
-    </div>
-
-    </div>
-    {/* <Navtop />    */}
-     </div>
   
 
    
